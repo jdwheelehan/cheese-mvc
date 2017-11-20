@@ -6,13 +6,26 @@
 
     <nav th:replace="fragments :: navigation"></nav>
 
-    <p th:unless="${cheeses} and ${cheeses.size()}">no cheese :(</p>
+    <h3 th:unless="${cheeses} and ${cheeses.size()}">no cheese :(</h3>
+    <br/>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th></th>
+            <th>Description</th>
+        </tr>
+
+        <tr th:each="cheese : ${cheeses}">
+            <td th:text="${cheese.name.toLowerCase()}"></td>
+            <td></td>
+            <td th:text="${cheese.description.toLowerCase()}"></td>
+            <td></td>
+
+        </tr>
+    </table>
 
 
 
-    <ul>
-        <li th:each="cheese : ${cheeses}" th:text="${cheese.getName}"></li>
 
-    </ul>
 </body>
 </html>
