@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}"></h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+<form method="post">
+    <table  th:each="cheese : ${cheeses}">
+        <tr>
+        <td><input type="checkbox" name="cheeseIds" th:value="${cheese.cheeseId}" th:text="${cheese.name.toLowerCase()}"/></td>
+            <td></td>
+        <td th:text="${cheese.description.toLowerCase()}"></td>
+            <td></td>
+        </tr>
+    </table>
+    <input type="submit" value="Remove Cheeses"/>
+
+</form>
+
+</body>
+</html>
