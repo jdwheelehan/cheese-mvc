@@ -42,4 +42,9 @@ public class Cheese {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public void updateCheese(String aName, String aDesription){
+        this.name = aName;
+        this.description = aDesription;
+    }
 }
