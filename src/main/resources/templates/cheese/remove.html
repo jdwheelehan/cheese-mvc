@@ -8,7 +8,7 @@
 <form method="post">
     <table  th:each="cheese : ${cheeses}">
         <tr>
-        <td><input type="checkbox" name="cheeseIds" th:value="${cheese.cheeseId}" th:text="${cheese.name.toLowerCase()}"/></td>
+        <td><input type="checkbox" name="cheeseIds" th:value="${cheese.id}" th:text="${cheese.name.toLowerCase()}"/></td>
             <td></td>
         <td th:text="${cheese.description.toLowerCase()}"></td>
             <td></td>

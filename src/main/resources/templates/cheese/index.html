@@ -8,18 +8,22 @@
 
     <h3 th:unless="${cheeses} and ${cheeses.size()}">no cheese :(</h3>
     <br/>
-    <table>
+    <table class="table">
         <tr>
             <th>Name</th>
             <th></th>
             <th>Description</th>
+            <th>Type</th>
         </tr>
 
         <tr th:each="cheese : ${cheeses}">
             <td th:text="${cheese.name.toLowerCase()}"></td>
-            <td></td>
+
             <td th:text="${cheese.description.toLowerCase()}"></td>
-            <td></td>
+
+            <td th:text="${cheese.type.name}"></td>
+
+
 
         </tr>
     </table>
